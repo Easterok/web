@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Подтверждение регистрации{% endblock %}
+
+
+{% block content %}
+<div class="main-container" role="alert">
+  <div class="container">
+    <div class="email_confirm">
+      <p>
+        <strong>Неудачно!</strong> Ссылка недействительна. Пожалуйста, попробуйте еще раз.
+      </p>
+      <br>
+      <a href="{% url 'home' %}" class="button">Вернутся на домашную страницу</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

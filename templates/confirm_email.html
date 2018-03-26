@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Подтверждение регистрации{% endblock %}
+
+{% block content %}
+<div class="main-container" role="alert">
+  <div class="container">
+    <div class="email_confirm">
+      <p>
+        Для подтверждения регистрации пройдите по ссылке, отправленной на Вашу почту
+      </p>
+      <br>
+      <a href="{% url 'home' %}" class="button">Вернутся на домашную страницу</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

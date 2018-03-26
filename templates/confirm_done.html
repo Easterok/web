@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Подтверждение регистрации{% endblock %}
+
+
+{% block content %}
+<div class="main-container" role="alert">
+  <div class="container">
+    <div class="email_confirm">
+      <p>
+        <strong>Успех!</strong> Ваша учетная запись успешно создана! Теперь вы можете авторизаваться используя форму входа.
+      </p>
+      <br>
+      <a href="{% url 'home' %}" class="button">Вернутся на домашную страницу</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

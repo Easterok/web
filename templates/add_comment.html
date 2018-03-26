@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block addcomment %}
+    {{ user.username }}
+<form method="post" novalidate>
+    {% csrf_token %}
+    {% include 'includes/form.html' %}
+    <button type="submit">создать отзыв</button>
+</form>
+{% endblock %}

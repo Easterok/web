@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="main-container">
+    <section class="content">
+      <div class="container">
+      <h1 class="head">Главная страница Task Manager</h1>
+      
+      <div class="container-text">
+        <p class="main-text">Данное приложение помогает вам управлять проектами небольших групп</p>
+        {% if user.is_authenticated %}
+        <button href="" class="button">Начать пользоваться</button>
+        {% else %}
+        <p class="main-text">Для начала, вам необходимо <a href="{% url 'signup' %}">зарегистрироваться</a></p>
+        <p class="main-text">Если вы уже это сделали, <a href="{% url 'login' %}">войдите</a></p>
+        {% endif %}
+      </div>
+    </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <small>Это приложение разработано специально для курса MAIL.RU</small>
+      </div>
+    </footer>
+    
+  </div>
+{% endblock %}
+
+{% block javascript %}
+<script>
+  // function comments(objects) {
+  //   for (let i = 0; i < objects.comments.length; i++) {
+  //     document.getElementById("js-user" + i).innerText = objects.comments[i].user;
+  //     document.getElementById("js-text" + i).innerText = objects.comments[i].text;
+  //     document.getElementById("js-date" + i).innerText = objects.comments[i].date.match(/\d*-\d*-\d*/g);
+  //     document.getElementById("js-city" + i).innerText = objects.comments[i].city;
+  //     document.getElementById("js-rating" + i).innerText = objects.comments[i].rating;
+  //     document.getElementById("js-avatar" + i).innerText = 'avatar: ' + objects.comments[i].avatar;
+  //   }
+  // }
+  // $(document).ready(function() {
+  //   $.ajax({
+  //     type: "GET",
+  //     url: "/load_comments/",
+  //     cache: false,
+  //     success: function(data){
+  //       comments(data);
+  //     }
+  //   });
+  //  });
+</script>
+{% endblock %}

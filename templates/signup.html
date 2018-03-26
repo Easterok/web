@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Регистрация{% endblock %}
+{% block content %}{% endblock %}
+{% block login %}
+<div class="main-container">
+  <div class="container">
+    <h2 class="head login__head">Регистрация в Task Manager</h2>
+    <form method="post" class="form">
+      {% csrf_token %}
+      {% include 'includes/form.html' %}
+      <button type="submit" class="form__row_button form__row_button-register button">Регистрация</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
